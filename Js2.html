@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      let employee = [
+        {
+          id: 1,
+          name: "Amit",
+          age: 52,
+          designation: "account officer",
+          salary: 130000,
+          phone: 9999555555,
+        },
+        {
+          id: 2,
+          name: "Puja",
+          age: 29,
+          designation: "developer",
+          salary: 70000,
+          phone: 7012354600,
+        },
+        {
+          id: 3,
+          name: "Ram",
+          age: 37,
+          designation: "Technician",
+          salary: 30000,
+          phone: 8654987032,
+        },
+        {
+          id: 4,
+          name: "Sakshi",
+          age: 25,
+          designation: "Receptionist",
+          salary: 25000,
+          phone: 9191828200,
+        },
+        {
+          id: 5,
+          name: "Raj",
+          age: 38,
+          designation: "Manager",
+          salary: 150000,
+          phone: 9191910000,
+        },
+        {
+          id: 6,
+          name: "Julie",
+          age: 32,
+          designation: "developer",
+          salary: 25000,
+          phone: 8888800000,
+        },
+        {
+          id: 7,
+          name: "Jess",
+          age: 38,
+          designation: "Programmer",
+          salary: 80000,
+          phone: 7984561230,
+        },
+      ];
+      let developer = employee.filter(
+        (item) => item.designation == "developer"
+      );
+      console.log(developer);
+
+      let employee_under_30 = employee.filter((employee) => employee.age < 30);
+      console.log("employee under 30", employee_under_30);
+
+      let employee_above_70K = employee.filter(
+        (e) => e.age < 30 && e.salary > 70000
+      );
+      console.log("employee under 30 and salary above 70K", employee_above_70K);
+
+      let accountant = employee.filter(
+        (item) => item.salary < 40000 && item.designation == "accountant"
+      );
+      console.log(accountant);
+
+      let id5 = employee.find((item) => item.id == 5);
+      console.log(id5);
+
+      let jess = employee.filter((item) => item.name == "Jess");
+      console.log(jess);
+    </script>
+  </body>
+</html>
